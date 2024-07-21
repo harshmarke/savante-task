@@ -1,0 +1,454 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #595555;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 50px;
+    position: fixed;
+    font-size: 15px;
+    z-index: 3;
+}
+
+nav a {
+    color: #a0a0a0;
+    text-decoration: none;
+    padding: 0 20px;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: 0.2s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(190, 237, 34);
+    transition: 0.5s linear;
+}
+
+nav a:hover {
+    color: #ffffffc1;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+.hero {
+    padding: 100px 20px;
+    background: linear-gradient(to right, #444, #222);
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    line-height: 1.2;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.hero button {
+    padding: 15px 30px;
+    background: #007BFF;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero button:hover {
+    background: #0056b3;
+}
+
+.signup-options {
+    margin-top: 20px;
+}
+
+.signup-options button {
+    padding: 15px 30px;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: opacity 0.3s;
+}
+
+.signup-options button:first-child {
+    background: #28a745;
+}
+
+.signup-options button:last-child {
+    background: #17a2b8;
+}
+
+.signup-options button:hover {
+    opacity: 0.8;
+}
+
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #007BFF;
+}
+
+.feature {
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+
+/* Card styling */
+#features {
+    background-color: black;
+}
+#features .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    position: relative;
+    z-index: 1;
+}
+
+#features .card {
+    width: 300px;
+    height: 250px;
+    margin: 10px 20px;
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    position: relative;
+}
+
+#features .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transform: translateY(-100%);
+    transition: transform 0.6s;
+}
+
+#features .card:hover::before {
+    transform: translateY(100%);
+}
+
+#features .card-content {
+    padding: 20px;
+    transform-style: preserve-3d;
+}
+
+#features .card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    transform: translateZ(50px);
+}
+
+#features .card-description {
+    font-size: 16px;
+    color: #ccc;
+    text-align: left;
+    margin: 15px 15px;
+    margin-top: 25px;
+    transform: translateZ(30px);
+}
+
+#features .card-image {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transform: translateZ(70px);
+}
+
+#features .card-actions {
+    display: flex;
+    justify-content: space-between;
+    transform: translateZ(40px);
+}
+
+#features .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+#features .btn-primary {
+    background-color: #00ffff;
+    color: #000;
+}
+
+#features .btn-secondary {
+    background-color: transparent;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+}
+
+#features .btn:hover {
+    transform: scale(1.05) translateZ(5px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+
+/* About styling */
+#about {
+    background-color: black;
+    padding-top: 5px;
+    margin-top: -35px;
+}
+
+#about .container p{
+    text-align: left;
+    color: rgb(180, 177, 177);
+    font-weight: bold;
+    padding: 10px 10px;
+}
+
+#about .container h3{
+    color: rgb(190, 71, 71);
+    margin: 10px;
+}
+
+#about .container .container-1{
+    margin: 10px 10px;
+}
+
+#about .container .container-2{
+    margin: 15px 10px;
+}
+#about .container .container-3{
+    margin: 15px 10px;
+}
+
+/* Styling for hero section */
+
+header .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 30px;
+}
+
+header .hero-content h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+header .hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+header .hero-buttons .btn {
+    padding: 15px 8px;
+    margin: 0 15px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+header .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+header .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+header .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+header .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+
+/* Styling for Brand and Influencer - Sign Up Page */
+
+.body-brand,
+.body-influencer {
+    background-image: url('./background-image.jpg');
+    background-size: cover; /* Makes sure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center fixed; /* Centers the image */
+}
+
+
+header .brand,
+header .influencer {
+    background-color: #595555;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 50px;
+    position: fixed;
+    font-size: 15px;
+    z-index: 3;
+}
+
+#signup-brand,
+#signup-influencer {
+    padding: 100px 20px;
+}
+
+#signup-brand fieldset,
+#signup-influencer fieldset {
+    border: 0;
+    text-align: center;
+}
+
+#signup-brand input[type="submit"],
+#signup-influencer input[type="submit"] {
+    background: rgba(235, 30, 54, 1);
+    border: 0;
+    border-radius: 12px;
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+}
+
+#signup-brand input,
+#signup-influencer input {
+    background: transparent;
+    border: 0;
+    border-left: 4px solid;
+    border-color: #FF0000;
+    padding: 10px;
+    color: white;
+}
+
+#signup-brand input[type="text"]:focus,
+#signup-brand input[type="url"]:focus,
+#signup-influencer input[type="text"]:focus, 
+#signup-influencer input[type="number"]:focus {
+    outline: 0;
+    background: rgba(235, 30, 54, 0.3);
+    border-radius: 15px;
+    border-color: transparent;
+}
+
+#signup-brand ::placeholder,
+#signup-influencer ::placeholder {
+    color: #d3d3d3;
+}
+
+#signup-brand .niche-class,
+#signup-brand .company-size,
+#signup-influencer .niche-class,
+#signup-brand textarea,
+#signup-influencer textarea {
+    color: #d3d3d3;
+    margin-left: -40px;
+    background: transparent;
+    border: 0;
+    border-left: 4px solid;
+    border-color: #FF0000;
+    padding: 10px;    
+    font-size: 14px;
+}
+
+#signup-brand .company-size {
+    margin-left: 85px;
+}
+
+#signup-brand #niche,
+#signup-brand #company-size,
+#signup-influencer #niche{
+    padding: 5px;
+}
+
+#signup-influencer textarea,
+#signup-brand textarea {
+    background: transparent;
+    resize: vertical;
+    color: white;
+    margin-left: 17px;
+}
+
+

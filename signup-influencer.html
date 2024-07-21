@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up as Influencer - Savante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body-influencer">
+
+    <header>
+        <nav class="influencer">
+            <div class="logo">Savante</div>
+
+            <a href="index.html">Home</a>
+            <a href="signup-brand.html">Sign Up as Brand</a>
+        </nav>
+    </header>
+
+
+    <section id="signup-influencer">
+        <h2>Sign Up as Influencer</h2>
+        <form>
+            <fieldset>
+                <br />
+                <input type="text" name="username" id="username" placeholder="Name" required autofocus>
+                <br /><br />
+                <input type="text" name="instagram" id="instagram" placeholder="Instagram Handle" required>
+                <br /><br />
+                <label for="niche" class="niche-class">Niche</label>
+                <select id="niche" name="niche">
+                    <option value="tech">Tech</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="travel">Travel</option>
+                    <option value="food">Food</option>
+                    <option value="fitness">Fitness</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <br /><br />
+
+                <input type="number" name="followers-count" id="followers-count" placeholder="Followers"
+                    required>
+                <br /><br />
+                
+                <textarea type="text" name="audience-description" id="audience-description" placeholder="Audience Description"
+                    required></textarea>
+                <br /><br />
+                
+                <label for="submit"></label>
+                <input type="submit" name="submit" id="submit" value="Sign Up">
+            </fieldset>
+        </form>
+    </section>
+
+    
+</body>
+</html>
